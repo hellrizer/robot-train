@@ -1,5 +1,6 @@
 *** Settings ***
 Resource  LoginKeywords.robot
+Resource  LoginResource.robot
 Suite Setup     Open Browser To Website
 *** Test Cases ***
 Login Success
@@ -10,5 +11,5 @@ Login Success
   Wait Until Page Contains  Dashboard
 *** Keywords ***
 Fill Valid Credentials
-  Input Text  log   ${VALID_USERNAME}
+  Input Text  user_login   ${VALID_USERNAME}
   Input Text  user_pass    ${VALID_PASSWORD}
