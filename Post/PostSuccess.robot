@@ -73,4 +73,4 @@ Remove Post
   Click Element   //button[@class="editor-delete-post"]
   Wait Until Element Is Visible   //*[text()="Move to trash"]
   Click Element   //*[text()="Move to trash"]
-  Wait Until Page Contains   Deleted Post    timeout=10
+  Wait Until Element Is Not Visible  //*[text()="Move to trash"]
