@@ -59,7 +59,7 @@ Choose Uncategorized
   Click Element  //*[@id="categorychecklist"]//input[text()=Uncategorized]
 Click Publish
   Click Element   save-post
-  Wait Until Page Contains    Last edited by
+  Wait Until Page Contains    Last edited by   timeout=20
   Click Element   publish
 Click View Post
   Click Element   link=View post
