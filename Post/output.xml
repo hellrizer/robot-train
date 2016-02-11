@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160211 15:39:07.512" generator="Robot 3.0 (Python 2.7.11 on win32)">
+<suite source="C:\Users\user\Documents\WebDemo\wordpress\Post" id="s1" name="Post">
+<suite source="C:\Users\user\Documents\WebDemo\wordpress\Post\PostSuccess.robot" id="s1-s1" name="PostSuccess">
+<kw type="setup" name="Open Browser And Login">
+<kw name="Open Browser To Website" library="keywords">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${WEBSITE}</arg>
+</arguments>
+<msg timestamp="20160211 15:39:08.145" level="INFO">Opening browser 'firefox' to base url 'https://sprint3r6.wordpress.com'</msg>
+<status status="PASS" endtime="20160211 15:39:22.360" starttime="20160211 15:39:08.144"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20160211 15:39:22.661" starttime="20160211 15:39:22.361"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:22.662" starttime="20160211 15:39:08.143"></status>
+</kw>
+<kw name="Go To Login Page" library="LoginKeywords">
+<kw name="Go To Website" library="keywords">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${WEBSITE}</arg>
+</arguments>
+<msg timestamp="20160211 15:39:22.670" level="INFO">Opening url 'https://sprint3r6.wordpress.com'</msg>
+<status status="PASS" endtime="20160211 15:39:25.520" starttime="20160211 15:39:22.668"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>sprint3r6</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:39:25.794" starttime="20160211 15:39:25.521"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:25.795" starttime="20160211 15:39:22.666"></status>
+</kw>
+<kw name="Click More Tab" library="LoginKeywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="masthead"]/button</arg>
+</arguments>
+<msg timestamp="20160211 15:39:25.799" level="INFO">Clicking element '//*[@id="masthead"]/button'.</msg>
+<status status="PASS" endtime="20160211 15:39:26.349" starttime="20160211 15:39:25.798"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:26.349" starttime="20160211 15:39:25.796"></status>
+</kw>
+<kw name="Click Login Link" library="LoginKeywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//a[text()="Log in"]</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:39:26.786" starttime="20160211 15:39:26.351"></status>
+</kw>
+<kw name="Focus" library="Selenium2Library">
+<doc>Sets focus to element identified by `locator`.</doc>
+<arguments>
+<arg>//a[text()="WordPress.com"]</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:39:26.892" starttime="20160211 15:39:26.787"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//a[text()="Log in"]</arg>
+</arguments>
+<msg timestamp="20160211 15:39:26.894" level="INFO">Clicking element '//a[text()="Log in"]'.</msg>
+<status status="PASS" endtime="20160211 15:39:27.363" starttime="20160211 15:39:26.893"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:27.364" starttime="20160211 15:39:26.350"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>user_login</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:39:29.021" starttime="20160211 15:39:27.364"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:29.022" starttime="20160211 15:39:22.663"></status>
+</kw>
+<kw name="Fill valid username" library="LoginKeywords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>user_login</arg>
+<arg>${VALID_USERNAME}</arg>
+</arguments>
+<msg timestamp="20160211 15:39:29.026" level="INFO">Typing text 'sprint3r6' into text field 'user_login'</msg>
+<status status="PASS" endtime="20160211 15:39:29.316" starttime="20160211 15:39:29.024"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:29.317" starttime="20160211 15:39:29.023"></status>
+</kw>
+<kw name="Fill valid password" library="LoginKeywords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>user_pass</arg>
+<arg>${VALID_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20160211 15:39:29.320" level="INFO">Typing text 'WorkingSoftware' into text field 'user_pass'</msg>
+<status status="PASS" endtime="20160211 15:39:29.798" starttime="20160211 15:39:29.319"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:29.799" starttime="20160211 15:39:29.318"></status>
+</kw>
+<kw name="Uncheck Remember Me" library="LoginKeywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="rememberme" and @checked='checked']</arg>
+</arguments>
+<msg timestamp="20160211 15:39:29.803" level="INFO">Clicking element '//*[@id="rememberme" and @checked='checked']'.</msg>
+<status status="PASS" endtime="20160211 15:39:30.088" starttime="20160211 15:39:29.801"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:30.089" starttime="20160211 15:39:29.800"></status>
+</kw>
+<kw name="Click Login" library="LoginKeywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>wp-submit</arg>
+</arguments>
+<msg timestamp="20160211 15:39:30.092" level="INFO">Clicking element 'wp-submit'.</msg>
+<status status="PASS" endtime="20160211 15:39:41.670" starttime="20160211 15:39:30.091"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:41.671" starttime="20160211 15:39:30.090"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Dashboard</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:39:41.806" starttime="20160211 15:39:41.671"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:41.807" starttime="20160211 15:39:08.142"></status>
+</kw>
+<test id="s1-s1-t1" name="Post Content Success With Title and Text Image Content">
+<kw type="setup" name="Go To Dashboard Page" library="PostKeywords">
+<kw name="Go To Website" library="keywords">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${WEBSITE}</arg>
+</arguments>
+<msg timestamp="20160211 15:39:41.817" level="INFO">Opening url 'https://sprint3r6.wordpress.com'</msg>
+<status status="PASS" endtime="20160211 15:39:41.950" starttime="20160211 15:39:41.816"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>sprint3r6</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:39:44.562" starttime="20160211 15:39:41.950"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:44.562" starttime="20160211 15:39:41.814"></status>
+</kw>
+<kw name="Click More Tab" library="LoginKeywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="masthead"]/button</arg>
+</arguments>
+<msg timestamp="20160211 15:39:44.565" level="INFO">Clicking element '//*[@id="masthead"]/button'.</msg>
+<status status="PASS" endtime="20160211 15:39:46.476" starttime="20160211 15:39:44.564"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:46.477" starttime="20160211 15:39:44.563"></status>
+</kw>
+<kw name="Click Dashboard Link" library="PostKeywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//a[text()="Site Admin"]</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:39:46.921" starttime="20160211 15:39:46.480"></status>
+</kw>
+<kw name="Focus" library="Selenium2Library">
+<doc>Sets focus to element identified by `locator`.</doc>
+<arguments>
+<arg>//a[text()="WordPress.com"]</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:39:47.106" starttime="20160211 15:39:46.921"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//a[text()="Site Admin"]</arg>
+</arguments>
+<msg timestamp="20160211 15:39:47.108" level="INFO">Clicking element '//a[text()="Site Admin"]'.</msg>
+<status status="PASS" endtime="20160211 15:39:48.072" starttime="20160211 15:39:47.107"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:48.073" starttime="20160211 15:39:46.478"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Dashboard</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:39:53.813" starttime="20160211 15:39:48.073"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:39:53.814" starttime="20160211 15:39:41.812"></status>
+</kw>
+<kw name="Click Link Post">
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="menu-posts"]/a/div[3]</arg>
+</arguments>
+<msg timestamp="20160211 15:39:53.826" level="INFO">Simulating Mouse Over on element '//*[@id="menu-posts"]/a/div[3]'</msg>
+<status status="PASS" endtime="20160211 15:39:56.590" starttime="20160211 15:39:53.823"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>link=Add New</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:40:03.069" starttime="20160211 15:39:56.590"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="menu-posts"]//a[text()="Add New"]</arg>
+</arguments>
+<msg timestamp="20160211 15:40:03.071" level="INFO">Clicking element '//*[@id="menu-posts"]//a[text()="Add New"]'.</msg>
+<status status="PASS" endtime="20160211 15:40:03.694" starttime="20160211 15:40:03.070"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Add New Post</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:40:13.359" starttime="20160211 15:40:03.695"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:40:13.360" starttime="20160211 15:39:53.816"></status>
+</kw>
+<kw name="Fill Title In Post">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>title</arg>
+<arg>${TITLE}</arg>
+</arguments>
+<msg timestamp="20160211 15:40:13.364" level="INFO">Typing text 'Meiy is a beautiful woman' into text field 'title'</msg>
+<status status="PASS" endtime="20160211 15:40:13.969" starttime="20160211 15:40:13.363"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:40:13.970" starttime="20160211 15:40:13.361"></status>
+</kw>
+<kw name="Fill Content With Text">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>content</arg>
+<arg>${CONTENT}</arg>
+</arguments>
+<msg timestamp="20160211 15:40:13.975" level="INFO">Typing text '083-1719-6xx' into text field 'content'</msg>
+<status status="PASS" endtime="20160211 15:40:14.909" starttime="20160211 15:40:13.973"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:40:14.909" starttime="20160211 15:40:13.971"></status>
+</kw>
+<kw name="Fill Content With Image">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>insert-media-button</arg>
+</arguments>
+<msg timestamp="20160211 15:40:14.913" level="INFO">Clicking element 'insert-media-button'.</msg>
+<status status="PASS" endtime="20160211 15:40:18.175" starttime="20160211 15:40:14.912"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//a[text()="Media Library"]</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:40:18.809" starttime="20160211 15:40:18.177"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//a[text()="Media Library"]</arg>
+</arguments>
+<msg timestamp="20160211 15:40:18.812" level="INFO">Clicking element '//a[text()="Media Library"]'.</msg>
+<status status="PASS" endtime="20160211 15:40:21.002" starttime="20160211 15:40:18.810"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//li[@aria-label="MeiyisBeautiful"]</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:40:21.147" starttime="20160211 15:40:21.003"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//li[@aria-label="MeiyisBeautiful"]</arg>
+</arguments>
+<msg timestamp="20160211 15:40:21.149" level="INFO">Clicking element '//li[@aria-label="MeiyisBeautiful"]'.</msg>
+<status status="PASS" endtime="20160211 15:40:22.007" starttime="20160211 15:40:21.148"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//button[text()="Insert into post"]</arg>
+</arguments>
+<msg timestamp="20160211 15:40:22.009" level="INFO">Clicking element '//button[text()="Insert into post"]'.</msg>
+<status status="PASS" endtime="20160211 15:40:23.222" starttime="20160211 15:40:22.008"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:40:23.223" starttime="20160211 15:40:14.911"></status>
+</kw>
+<kw name="Click Publish">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Draft saved</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:40:23.411" starttime="20160211 15:40:23.225"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>publish</arg>
+</arguments>
+<msg timestamp="20160211 15:40:23.413" level="INFO">Clicking element 'publish'.</msg>
+<status status="PASS" endtime="20160211 15:40:38.141" starttime="20160211 15:40:23.412"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:40:38.142" starttime="20160211 15:40:23.224"></status>
+</kw>
+<kw name="Click View Post">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>link=View post</arg>
+</arguments>
+<msg timestamp="20160211 15:40:38.146" level="INFO">Clicking element 'link=View post'.</msg>
+<status status="PASS" endtime="20160211 15:40:41.501" starttime="20160211 15:40:38.145"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TITLE}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:40:47.490" starttime="20160211 15:40:41.502"></status>
+</kw>
+<kw name="Page Should Contains">
+<arguments>
+<arg>${CONTENT}</arg>
+</arguments>
+<msg timestamp="20160211 15:40:47.510" level="FAIL">No keyword with name 'Page Should Contains' found. Did you mean:
+    Selenium2Library.Page Should Contain
+    Selenium2Library.Page Should Contain List
+    Selenium2Library.Page Should Not Contain
+    Selenium2Library.Page Should Contain Link
+    Selenium2Library.Table Should Contain
+    Selenium2Library.Frame Should Contain</msg>
+<status status="FAIL" endtime="20160211 15:40:47.511" starttime="20160211 15:40:47.509"></status>
+</kw>
+<status status="FAIL" endtime="20160211 15:40:47.512" starttime="20160211 15:40:38.144"></status>
+</kw>
+<kw type="teardown" name="Remove Post">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>link=Edit</arg>
+</arguments>
+<msg timestamp="20160211 15:40:47.516" level="INFO">Clicking element 'link=Edit'.</msg>
+<status status="PASS" endtime="20160211 15:40:50.748" starttime="20160211 15:40:47.515"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//button[@class="editor-delete-post"]</arg>
+<arg>timeout=10</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20160211 15:41:05.096" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160211 15:41:05.097" starttime="20160211 15:41:02.886"></status>
+</kw>
+<msg timestamp="20160211 15:41:05.101" level="FAIL">Element locator '//button[@class="editor-delete-post"]' did not match any elements after 10 seconds</msg>
+<status status="FAIL" endtime="20160211 15:41:05.101" starttime="20160211 15:40:50.749"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//button[@class="editor-delete-post"]</arg>
+</arguments>
+<msg timestamp="20160211 15:41:05.103" level="INFO">Clicking element '//button[@class="editor-delete-post"]'.</msg>
+<status status="PASS" endtime="20160211 15:41:09.918" starttime="20160211 15:41:05.102"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[text()="Move to trash"]</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:41:10.115" starttime="20160211 15:41:09.919"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[text()="Move to trash"]</arg>
+</arguments>
+<msg timestamp="20160211 15:41:10.117" level="INFO">Clicking element '//*[text()="Move to trash"]'.</msg>
+<status status="PASS" endtime="20160211 15:41:10.509" starttime="20160211 15:41:10.116"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Deleted Post</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:41:15.892" starttime="20160211 15:41:10.511"></status>
+</kw>
+<status status="FAIL" endtime="20160211 15:41:15.893" starttime="20160211 15:40:47.514">Element locator '//button[@class="editor-delete-post"]' did not match any elements after 10 seconds</status>
+</kw>
+<status status="FAIL" endtime="20160211 15:41:15.894" critical="yes" starttime="20160211 15:39:41.808">No keyword with name 'Page Should Contains' found. Did you mean:
+    Selenium2Library.Page Should Contain
+    Selenium2Library.Page Should Contain List
+    Selenium2Library.Page Should Not Contain
+    Selenium2Library.Page Should Contain Link
+    Selenium2Library.Table Should Contain
+    Selenium2Library.Frame Should Contain
+
+Also teardown failed:
+Element locator '//button[@class="editor-delete-post"]' did not match any elements after 10 seconds</status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20160211 15:41:17.172" starttime="20160211 15:41:15.902"></status>
+</kw>
+<status status="FAIL" endtime="20160211 15:41:17.172" starttime="20160211 15:39:07.609"></status>
+</suite>
+<status status="FAIL" endtime="20160211 15:41:17.183" starttime="20160211 15:39:07.522"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Post" pass="0">Post</stat>
+<stat fail="1" id="s1-s1" name="PostSuccess" pass="0">Post.PostSuccess</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20160211 11:46:55.346" generator="Robot 3.0 (Python 2.7.11 on win32)">
+<robot generated="20160211 13:32:06.418" generator="Robot 3.0 (Python 2.7.11 on win32)">
 <suite source="C:\Users\user\Documents\WebDemo\wordpress\Login\LoginSuccess.robot" id="s1" name="LoginSuccess">
 <test id="s1-t1" name="Login Success With No Remember Me">
 <kw type="setup" name="Open Browser To Website" library="keywords">
@@ -8,10 +8,14 @@
 <arguments>
 <arg>${WEBSITE}</arg>
 </arguments>
-<msg timestamp="20160211 11:46:55.931" level="INFO">Opening browser 'firefox' to base url 'https://sprint3r6.wordpress.com'</msg>
-<status status="PASS" endtime="20160211 11:47:10.419" starttime="20160211 11:46:55.930"></status>
+<msg timestamp="20160211 13:32:06.944" level="INFO">Opening browser 'firefox' to base url 'https://sprint3r6.wordpress.com'</msg>
+<status status="PASS" endtime="20160211 13:32:22.826" starttime="20160211 13:32:06.943"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:10.420" starttime="20160211 11:46:55.929"></status>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20160211 13:32:23.466" starttime="20160211 13:32:22.827"></status>
+</kw>
+<status status="PASS" endtime="20160211 13:32:23.467" starttime="20160211 13:32:06.941"></status>
 </kw>
 <kw name="Go To Login Page" library="LoginKeywords">
 <kw name="Go To Website" library="keywords">
@@ -20,10 +24,10 @@
 <arguments>
 <arg>${WEBSITE}</arg>
 </arguments>
-<msg timestamp="20160211 11:47:10.428" level="INFO">Opening url 'https://sprint3r6.wordpress.com'</msg>
-<status status="PASS" endtime="20160211 11:47:13.374" starttime="20160211 11:47:10.426"></status>
+<msg timestamp="20160211 13:32:23.472" level="INFO">Opening url 'https://sprint3r6.wordpress.com'</msg>
+<status status="PASS" endtime="20160211 13:32:26.129" starttime="20160211 13:32:23.471"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:13.375" starttime="20160211 11:47:10.425"></status>
+<status status="PASS" endtime="20160211 13:32:26.130" starttime="20160211 13:32:23.470"></status>
 </kw>
 <kw name="Click More Tab" library="LoginKeywords">
 <kw name="Click Element" library="Selenium2Library">
@@ -31,10 +35,10 @@
 <arguments>
 <arg>//*[@id="masthead"]/button</arg>
 </arguments>
-<msg timestamp="20160211 11:47:13.379" level="INFO">Clicking element '//*[@id="masthead"]/button'.</msg>
-<status status="PASS" endtime="20160211 11:47:14.385" starttime="20160211 11:47:13.378"></status>
+<msg timestamp="20160211 13:32:26.133" level="INFO">Clicking element '//*[@id="masthead"]/button'.</msg>
+<status status="PASS" endtime="20160211 13:32:27.378" starttime="20160211 13:32:26.132"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:14.386" starttime="20160211 11:47:13.376"></status>
+<status status="PASS" endtime="20160211 13:32:27.379" starttime="20160211 13:32:26.131"></status>
 </kw>
 <kw name="Click Login Link" library="LoginKeywords">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -42,26 +46,26 @@
 <arguments>
 <arg>//*[@id="meta-2"]/ul/li[2]/a</arg>
 </arguments>
-<status status="PASS" endtime="20160211 11:47:14.672" starttime="20160211 11:47:14.390"></status>
+<status status="PASS" endtime="20160211 13:32:27.610" starttime="20160211 13:32:27.382"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>//*[@id="meta-2"]/ul/li[2]/a</arg>
+<arg>link=Log in</arg>
 </arguments>
-<msg timestamp="20160211 11:47:14.674" level="INFO">Clicking element '//*[@id="meta-2"]/ul/li[2]/a'.</msg>
-<status status="PASS" endtime="20160211 11:47:15.011" starttime="20160211 11:47:14.673"></status>
+<msg timestamp="20160211 13:32:27.612" level="INFO">Clicking element 'link=Log in'.</msg>
+<status status="PASS" endtime="20160211 13:32:28.385" starttime="20160211 13:32:27.611"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:15.012" starttime="20160211 11:47:14.387"></status>
+<status status="PASS" endtime="20160211 13:32:28.386" starttime="20160211 13:32:27.380"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>user_login</arg>
 </arguments>
-<status status="PASS" endtime="20160211 11:47:16.581" starttime="20160211 11:47:15.012"></status>
+<status status="PASS" endtime="20160211 13:32:30.282" starttime="20160211 13:32:28.387"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:16.581" starttime="20160211 11:47:10.423"></status>
+<status status="PASS" endtime="20160211 13:32:30.282" starttime="20160211 13:32:23.469"></status>
 </kw>
 <kw name="Fill valid username" library="LoginKeywords">
 <kw name="Input Text" library="Selenium2Library">
@@ -70,10 +74,10 @@
 <arg>user_login</arg>
 <arg>${VALID_USERNAME}</arg>
 </arguments>
-<msg timestamp="20160211 11:47:16.586" level="INFO">Typing text 'sprint3r6' into text field 'user_login'</msg>
-<status status="PASS" endtime="20160211 11:47:16.846" starttime="20160211 11:47:16.585"></status>
+<msg timestamp="20160211 13:32:30.286" level="INFO">Typing text 'sprint3r6' into text field 'user_login'</msg>
+<status status="PASS" endtime="20160211 13:32:30.594" starttime="20160211 13:32:30.285"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:16.846" starttime="20160211 11:47:16.583"></status>
+<status status="PASS" endtime="20160211 13:32:30.595" starttime="20160211 13:32:30.284"></status>
 </kw>
 <kw name="Fill valid password" library="LoginKeywords">
 <kw name="Input Text" library="Selenium2Library">
@@ -82,10 +86,10 @@
 <arg>user_pass</arg>
 <arg>${VALID_PASSWORD}</arg>
 </arguments>
-<msg timestamp="20160211 11:47:16.850" level="INFO">Typing text 'WorkingSoftware' into text field 'user_pass'</msg>
-<status status="PASS" endtime="20160211 11:47:17.090" starttime="20160211 11:47:16.850"></status>
+<msg timestamp="20160211 13:32:30.599" level="INFO">Typing text 'WorkingSoftware' into text field 'user_pass'</msg>
+<status status="PASS" endtime="20160211 13:32:31.128" starttime="20160211 13:32:30.598"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:17.091" starttime="20160211 11:47:16.849"></status>
+<status status="PASS" endtime="20160211 13:32:31.129" starttime="20160211 13:32:30.596"></status>
 </kw>
 <kw name="Uncheck Remember Me" library="LoginKeywords">
 <kw name="Click Element" library="Selenium2Library">
@@ -93,10 +97,10 @@
 <arguments>
 <arg>//*[@id="rememberme" and @checked='checked']</arg>
 </arguments>
-<msg timestamp="20160211 11:47:17.094" level="INFO">Clicking element '//*[@id="rememberme" and @checked='checked']'.</msg>
-<status status="PASS" endtime="20160211 11:47:17.353" starttime="20160211 11:47:17.093"></status>
+<msg timestamp="20160211 13:32:31.133" level="INFO">Clicking element '//*[@id="rememberme" and @checked='checked']'.</msg>
+<status status="PASS" endtime="20160211 13:32:31.498" starttime="20160211 13:32:31.132"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:17.354" starttime="20160211 11:47:17.092"></status>
+<status status="PASS" endtime="20160211 13:32:31.499" starttime="20160211 13:32:31.130"></status>
 </kw>
 <kw name="Click Login" library="LoginKeywords">
 <kw name="Click Element" library="Selenium2Library">
@@ -104,23 +108,19 @@
 <arguments>
 <arg>wp-submit</arg>
 </arguments>
-<msg timestamp="20160211 11:47:17.357" level="INFO">Clicking element 'wp-submit'.</msg>
-<status status="PASS" endtime="20160211 11:47:29.072" starttime="20160211 11:47:17.357"></status>
+<msg timestamp="20160211 13:32:31.504" level="INFO">Clicking element 'wp-submit'.</msg>
+<status status="PASS" endtime="20160211 13:32:41.494" starttime="20160211 13:32:31.503"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:29.072" starttime="20160211 11:47:17.355"></status>
+<status status="PASS" endtime="20160211 13:32:41.495" starttime="20160211 13:32:31.501"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Dashboard</arg>
 </arguments>
-<status status="PASS" endtime="20160211 11:47:29.200" starttime="20160211 11:47:29.074"></status>
+<status status="PASS" endtime="20160211 13:32:41.789" starttime="20160211 13:32:41.496"></status>
 </kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20160211 11:47:29.815" starttime="20160211 11:47:29.202"></status>
-</kw>
-<status status="PASS" endtime="20160211 11:47:29.817" critical="yes" starttime="20160211 11:46:55.926"></status>
+<status status="PASS" endtime="20160211 13:32:41.791" critical="yes" starttime="20160211 13:32:06.939"></status>
 </test>
 <test id="s1-t2" name="Login Success With Remember Me">
 <kw type="setup" name="Open Browser To Website" library="keywords">
@@ -129,10 +129,14 @@
 <arguments>
 <arg>${WEBSITE}</arg>
 </arguments>
-<msg timestamp="20160211 11:47:29.831" level="INFO">Opening browser 'firefox' to base url 'https://sprint3r6.wordpress.com'</msg>
-<status status="PASS" endtime="20160211 11:47:44.414" starttime="20160211 11:47:29.830"></status>
+<msg timestamp="20160211 13:32:41.802" level="INFO">Opening browser 'firefox' to base url 'https://sprint3r6.wordpress.com'</msg>
+<status status="PASS" endtime="20160211 13:32:59.762" starttime="20160211 13:32:41.801"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:44.415" starttime="20160211 11:47:29.828"></status>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20160211 13:33:00.413" starttime="20160211 13:32:59.763"></status>
+</kw>
+<status status="PASS" endtime="20160211 13:33:00.413" starttime="20160211 13:32:41.799"></status>
 </kw>
 <kw name="Go To Login Page" library="LoginKeywords">
 <kw name="Go To Website" library="keywords">
@@ -141,10 +145,10 @@
 <arguments>
 <arg>${WEBSITE}</arg>
 </arguments>
-<msg timestamp="20160211 11:47:44.423" level="INFO">Opening url 'https://sprint3r6.wordpress.com'</msg>
-<status status="PASS" endtime="20160211 11:47:47.410" starttime="20160211 11:47:44.421"></status>
+<msg timestamp="20160211 13:33:00.421" level="INFO">Opening url 'https://sprint3r6.wordpress.com'</msg>
+<status status="PASS" endtime="20160211 13:33:02.379" starttime="20160211 13:33:00.420"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:47.411" starttime="20160211 11:47:44.419"></status>
+<status status="PASS" endtime="20160211 13:33:02.380" starttime="20160211 13:33:00.418"></status>
 </kw>
 <kw name="Click More Tab" library="LoginKeywords">
 <kw name="Click Element" library="Selenium2Library">
@@ -152,10 +156,10 @@
 <arguments>
 <arg>//*[@id="masthead"]/button</arg>
 </arguments>
-<msg timestamp="20160211 11:47:47.414" level="INFO">Clicking element '//*[@id="masthead"]/button'.</msg>
-<status status="PASS" endtime="20160211 11:47:48.308" starttime="20160211 11:47:47.412"></status>
+<msg timestamp="20160211 13:33:02.382" level="INFO">Clicking element '//*[@id="masthead"]/button'.</msg>
+<status status="PASS" endtime="20160211 13:33:03.134" starttime="20160211 13:33:02.382"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:48.309" starttime="20160211 11:47:47.411"></status>
+<status status="PASS" endtime="20160211 13:33:03.135" starttime="20160211 13:33:02.381"></status>
 </kw>
 <kw name="Click Login Link" library="LoginKeywords">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -163,26 +167,26 @@
 <arguments>
 <arg>//*[@id="meta-2"]/ul/li[2]/a</arg>
 </arguments>
-<status status="PASS" endtime="20160211 11:47:48.608" starttime="20160211 11:47:48.311"></status>
+<status status="PASS" endtime="20160211 13:33:03.482" starttime="20160211 13:33:03.138"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>//*[@id="meta-2"]/ul/li[2]/a</arg>
+<arg>link=Log in</arg>
 </arguments>
-<msg timestamp="20160211 11:47:48.611" level="INFO">Clicking element '//*[@id="meta-2"]/ul/li[2]/a'.</msg>
-<status status="PASS" endtime="20160211 11:47:48.937" starttime="20160211 11:47:48.610"></status>
+<msg timestamp="20160211 13:33:03.484" level="INFO">Clicking element 'link=Log in'.</msg>
+<status status="PASS" endtime="20160211 13:33:04.368" starttime="20160211 13:33:03.483"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:48.938" starttime="20160211 11:47:48.309"></status>
+<status status="PASS" endtime="20160211 13:33:04.368" starttime="20160211 13:33:03.136"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>user_login</arg>
 </arguments>
-<status status="PASS" endtime="20160211 11:47:50.588" starttime="20160211 11:47:48.939"></status>
+<status status="PASS" endtime="20160211 13:33:06.220" starttime="20160211 13:33:04.369"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:50.589" starttime="20160211 11:47:44.418"></status>
+<status status="PASS" endtime="20160211 13:33:06.220" starttime="20160211 13:33:00.415"></status>
 </kw>
 <kw name="Fill valid username" library="LoginKeywords">
 <kw name="Input Text" library="Selenium2Library">
@@ -191,10 +195,10 @@
 <arg>user_login</arg>
 <arg>${VALID_USERNAME}</arg>
 </arguments>
-<msg timestamp="20160211 11:47:50.593" level="INFO">Typing text 'sprint3r6' into text field 'user_login'</msg>
-<status status="PASS" endtime="20160211 11:47:50.918" starttime="20160211 11:47:50.592"></status>
+<msg timestamp="20160211 13:33:06.224" level="INFO">Typing text 'sprint3r6' into text field 'user_login'</msg>
+<status status="PASS" endtime="20160211 13:33:06.511" starttime="20160211 13:33:06.223"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:50.919" starttime="20160211 11:47:50.591"></status>
+<status status="PASS" endtime="20160211 13:33:06.512" starttime="20160211 13:33:06.222"></status>
 </kw>
 <kw name="Fill valid password" library="LoginKeywords">
 <kw name="Input Text" library="Selenium2Library">
@@ -203,10 +207,10 @@
 <arg>user_pass</arg>
 <arg>${VALID_PASSWORD}</arg>
 </arguments>
-<msg timestamp="20160211 11:47:50.923" level="INFO">Typing text 'WorkingSoftware' into text field 'user_pass'</msg>
-<status status="PASS" endtime="20160211 11:47:51.193" starttime="20160211 11:47:50.922"></status>
+<msg timestamp="20160211 13:33:06.517" level="INFO">Typing text 'WorkingSoftware' into text field 'user_pass'</msg>
+<status status="PASS" endtime="20160211 13:33:07.056" starttime="20160211 13:33:06.516"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:47:51.194" starttime="20160211 11:47:50.921"></status>
+<status status="PASS" endtime="20160211 13:33:07.057" starttime="20160211 13:33:06.514"></status>
 </kw>
 <kw name="Click Login" library="LoginKeywords">
 <kw name="Click Element" library="Selenium2Library">
@@ -214,17 +218,17 @@
 <arguments>
 <arg>wp-submit</arg>
 </arguments>
-<msg timestamp="20160211 11:47:51.199" level="INFO">Clicking element 'wp-submit'.</msg>
-<status status="PASS" endtime="20160211 11:48:04.165" starttime="20160211 11:47:51.198"></status>
+<msg timestamp="20160211 13:33:07.062" level="INFO">Clicking element 'wp-submit'.</msg>
+<status status="PASS" endtime="20160211 13:33:20.940" starttime="20160211 13:33:07.060"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:48:04.166" starttime="20160211 11:47:51.195"></status>
+<status status="PASS" endtime="20160211 13:33:20.941" starttime="20160211 13:33:07.059"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Dashboard</arg>
 </arguments>
-<status status="PASS" endtime="20160211 11:48:04.300" starttime="20160211 11:48:04.167"></status>
+<status status="PASS" endtime="20160211 13:33:21.098" starttime="20160211 13:33:20.943"></status>
 </kw>
 <kw name="Get Cookie Value" library="Selenium2Library">
 <doc>Returns value of cookie found with `name`.</doc>
@@ -234,8 +238,8 @@
 <assign>
 <var>${wordpress_logged_in}</var>
 </assign>
-<msg timestamp="20160211 11:48:04.793" level="INFO">${wordpress_logged_in} = sprint3r6%7C1549774112%7CktBJrmdfTkzexQRSA4kUhfm3m7jGG2kHBaaV33L2Wen%7C1f0a926ab5cc48886c0cdc5730aac312ccdac0fd3ae885f9fa2bdaa56fa78a64</msg>
-<status status="PASS" endtime="20160211 11:48:04.793" starttime="20160211 11:48:04.302"></status>
+<msg timestamp="20160211 13:33:21.171" level="INFO">${wordpress_logged_in} = sprint3r6%7C1549780427%7Ca3cXA05AwLNesNgPyIxySG8GWtc0sa4EtoT8fM1MAoy%7Cecf071445d4a714e3ffd65f5c2a5d7c82611ce9498e0dcf656b8784001971044</msg>
+<status status="PASS" endtime="20160211 13:33:21.171" starttime="20160211 13:33:21.100"></status>
 </kw>
 <kw name="Get Cookie Value" library="Selenium2Library">
 <doc>Returns value of cookie found with `name`.</doc>
@@ -245,8 +249,8 @@
 <assign>
 <var>${wordpress_sec}</var>
 </assign>
-<msg timestamp="20160211 11:48:04.906" level="INFO">${wordpress_sec} = sprint3r6%7C1549774112%7CktBJrmdfTkzexQRSA4kUhfm3m7jGG2kHBaaV33L2Wen%7C787ca2fa0ed9042b33d0c7dfb217c59787feb58719ba2378d654ea1cfd64c743</msg>
-<status status="PASS" endtime="20160211 11:48:04.906" starttime="20160211 11:48:04.794"></status>
+<msg timestamp="20160211 13:33:21.380" level="INFO">${wordpress_sec} = sprint3r6%7C1549780427%7Ca3cXA05AwLNesNgPyIxySG8GWtc0sa4EtoT8fM1MAoy%7Cd2e50d69dfbd14c8eff668e3e0d3677570cdcfca5f2a2dc1dc2ad88bbd3adef8</msg>
+<status status="PASS" endtime="20160211 13:33:21.380" starttime="20160211 13:33:21.172"></status>
 </kw>
 <kw name="Get Cookie Value" library="Selenium2Library">
 <doc>Returns value of cookie found with `name`.</doc>
@@ -256,12 +260,12 @@
 <assign>
 <var>${wordpress_test_cookie}</var>
 </assign>
-<msg timestamp="20160211 11:48:04.980" level="INFO">${wordpress_test_cookie} = WP+Cookie+check</msg>
-<status status="PASS" endtime="20160211 11:48:04.980" starttime="20160211 11:48:04.908"></status>
+<msg timestamp="20160211 13:33:21.443" level="INFO">${wordpress_test_cookie} = WP+Cookie+check</msg>
+<status status="PASS" endtime="20160211 13:33:21.444" starttime="20160211 13:33:21.382"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20160211 11:48:05.703" starttime="20160211 11:48:04.983"></status>
+<status status="PASS" endtime="20160211 13:33:22.099" starttime="20160211 13:33:21.447"></status>
 </kw>
 <kw name="Open Browser To Website" library="keywords">
 <kw name="Open Browser" library="Selenium2Library">
@@ -269,10 +273,14 @@
 <arguments>
 <arg>${WEBSITE}</arg>
 </arguments>
-<msg timestamp="20160211 11:48:05.707" level="INFO">Opening browser 'firefox' to base url 'https://sprint3r6.wordpress.com'</msg>
-<status status="PASS" endtime="20160211 11:48:21.393" starttime="20160211 11:48:05.706"></status>
+<msg timestamp="20160211 13:33:22.102" level="INFO">Opening browser 'firefox' to base url 'https://sprint3r6.wordpress.com'</msg>
+<status status="PASS" endtime="20160211 13:33:39.078" starttime="20160211 13:33:22.101"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:48:21.394" starttime="20160211 11:48:05.705"></status>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20160211 13:33:39.694" starttime="20160211 13:33:39.079"></status>
+</kw>
+<status status="PASS" endtime="20160211 13:33:39.695" starttime="20160211 13:33:22.100"></status>
 </kw>
 <kw name="Add Cookie" library="Selenium2Library">
 <doc>Adds a cookie to your current session.</doc>
@@ -280,7 +288,7 @@
 <arg>wordpress_logged_in</arg>
 <arg>${wordpress_logged_in}</arg>
 </arguments>
-<status status="PASS" endtime="20160211 11:48:22.075" starttime="20160211 11:48:21.395"></status>
+<status status="PASS" endtime="20160211 13:33:39.760" starttime="20160211 13:33:39.697"></status>
 </kw>
 <kw name="Add Cookie" library="Selenium2Library">
 <doc>Adds a cookie to your current session.</doc>
@@ -288,7 +296,7 @@
 <arg>wordpress_sec</arg>
 <arg>${wordpress_sec}</arg>
 </arguments>
-<status status="PASS" endtime="20160211 11:48:22.114" starttime="20160211 11:48:22.076"></status>
+<status status="PASS" endtime="20160211 13:33:39.808" starttime="20160211 13:33:39.762"></status>
 </kw>
 <kw name="Add Cookie" library="Selenium2Library">
 <doc>Adds a cookie to your current session.</doc>
@@ -296,7 +304,7 @@
 <arg>wordpress_test_cookie</arg>
 <arg>${wordpress_test_cookie}</arg>
 </arguments>
-<status status="PASS" endtime="20160211 11:48:22.156" starttime="20160211 11:48:22.116"></status>
+<status status="PASS" endtime="20160211 13:33:39.860" starttime="20160211 13:33:39.810"></status>
 </kw>
 <kw name="Go To Website" library="keywords">
 <kw name="Go To" library="Selenium2Library">
@@ -304,25 +312,21 @@
 <arguments>
 <arg>${WEBSITE}</arg>
 </arguments>
-<msg timestamp="20160211 11:48:22.159" level="INFO">Opening url 'https://sprint3r6.wordpress.com'</msg>
-<status status="PASS" endtime="20160211 11:48:26.576" starttime="20160211 11:48:22.158"></status>
+<msg timestamp="20160211 13:33:39.865" level="INFO">Opening url 'https://sprint3r6.wordpress.com'</msg>
+<status status="PASS" endtime="20160211 13:33:44.833" starttime="20160211 13:33:39.864"></status>
 </kw>
-<status status="PASS" endtime="20160211 11:48:26.576" starttime="20160211 11:48:22.157"></status>
+<status status="PASS" endtime="20160211 13:33:44.834" starttime="20160211 13:33:39.862"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>My Site</arg>
 </arguments>
-<status status="PASS" endtime="20160211 11:48:26.781" starttime="20160211 11:48:26.578"></status>
+<status status="PASS" endtime="20160211 13:33:45.079" starttime="20160211 13:33:44.836"></status>
 </kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20160211 11:48:27.263" starttime="20160211 11:48:26.783"></status>
-</kw>
-<status status="PASS" endtime="20160211 11:48:27.265" critical="yes" starttime="20160211 11:47:29.824"></status>
+<status status="PASS" endtime="20160211 13:33:45.080" critical="yes" starttime="20160211 13:32:41.796"></status>
 </test>
-<status status="PASS" endtime="20160211 11:48:27.271" starttime="20160211 11:46:55.359"></status>
+<status status="PASS" endtime="20160211 13:33:45.087" starttime="20160211 13:32:06.428"></status>
 </suite>
 <statistics>
 <total>

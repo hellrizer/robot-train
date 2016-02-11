@@ -9,11 +9,13 @@ Go To Login Page
   Click More Tab
   Click Login Link
   Wait Until Element is Visible   user_login
+
 Click More Tab
   Click Element   //*[@id="masthead"]/button
 Click Login Link
-  Wait Until Element is Visible   //*[@id="meta-2"]/ul/li[2]/a
-  Click Element   //*[@id="meta-2"]/ul/li[2]/a
+  Wait Until Element is Visible   //a[text()="Log in"]
+  Focus     //a[text()="WordPress.com"]
+  Click Element   //a[text()="Log in"]
 Uncheck Remember Me
   Click Element   //*[@id="rememberme" and @checked='checked']
 Click Login
