@@ -46,18 +46,3 @@ Login Fail With empty username and empty password
   Uncheck Remember Me
   Click Login
   Remember me is checked
-*** Keywords ***
-Fill invalid username
-  Input Text  user_login   zzzzzzz
-Fill invalid password
-  Input Text  user_pass    zzzzzzz
-Fill valid username
-  Input Text  user_login   ${VALID_USERNAME}
-Fill valid password
-  Input Text  user_pass    ${VALID_PASSWORD}
-Fill empty username
-  Input Text  user_login   ${EMPTY}
-Fill empty password
-  Input Text  user_pass    ${EMPTY}
-Remember me is checked
-  Wait Until Element Is Visible  //*[@id="rememberme" and @checked='checked']

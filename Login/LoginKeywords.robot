@@ -18,3 +18,17 @@ Uncheck Remember Me
   Click Element   //*[@id="rememberme" and @checked='checked']
 Click Login
   Click Element   wp-submit
+Fill invalid username
+  Input Text  user_login   zzzzzzz
+Fill invalid password
+  Input Text  user_pass    zzzzzzz
+Fill valid username
+  Input Text  user_login   ${VALID_USERNAME}
+Fill valid password
+  Input Text  user_pass    ${VALID_PASSWORD}
+Fill empty username
+  Input Text  user_login   ${EMPTY}
+Fill empty password
+  Input Text  user_pass    ${EMPTY}
+Remember me is checked
+  Wait Until Element Is Visible  //*[@id="rememberme" and @checked='checked']
