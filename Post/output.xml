@@ -167,3 +167,188 @@
 <status status="PASS" endtime="20160211 15:57:27.659" starttime="20160211 15:57:25.984"></status>
 </kw>
 <status status="PASS" endtime="20160211 15:57:27.660" starttime="20160211 15:57:25.982"></status>
+</kw>
+<kw name="Click Dashboard Link" library="PostKeywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//a[text()="Site Admin"]</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:57:28.086" starttime="20160211 15:57:27.663"></status>
+</kw>
+<kw name="Focus" library="Selenium2Library">
+<doc>Sets focus to element identified by `locator`.</doc>
+<arguments>
+<arg>//a[text()="WordPress.com"]</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:57:28.221" starttime="20160211 15:57:28.086"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//a[text()="Site Admin"]</arg>
+</arguments>
+<msg timestamp="20160211 15:57:28.223" level="INFO">Clicking element '//a[text()="Site Admin"]'.</msg>
+<status status="PASS" endtime="20160211 15:57:29.029" starttime="20160211 15:57:28.222"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:57:29.030" starttime="20160211 15:57:27.661"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Dashboard</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:57:34.881" starttime="20160211 15:57:29.030"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:57:34.882" starttime="20160211 15:57:23.128"></status>
+</kw>
+<kw name="Click Link Post">
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="menu-posts"]/a/div[3]</arg>
+</arguments>
+<msg timestamp="20160211 15:57:34.886" level="INFO">Simulating Mouse Over on element '//*[@id="menu-posts"]/a/div[3]'</msg>
+<status status="PASS" endtime="20160211 15:57:36.928" starttime="20160211 15:57:34.885"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>link=Add New</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:57:42.417" starttime="20160211 15:57:36.929"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="menu-posts"]//a[text()="Add New"]</arg>
+</arguments>
+<msg timestamp="20160211 15:57:42.419" level="INFO">Clicking element '//*[@id="menu-posts"]//a[text()="Add New"]'.</msg>
+<status status="PASS" endtime="20160211 15:57:43.086" starttime="20160211 15:57:42.418"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Add New Post</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:57:49.232" starttime="20160211 15:57:43.087"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:57:49.233" starttime="20160211 15:57:34.884"></status>
+</kw>
+<kw name="Fill Title In Post">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>title</arg>
+<arg>${TITLE}</arg>
+</arguments>
+<msg timestamp="20160211 15:57:49.240" level="INFO">Typing text 'Meiy is a beautiful woman' into text field 'title'</msg>
+<status status="PASS" endtime="20160211 15:57:52.011" starttime="20160211 15:57:49.238"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:57:52.012" starttime="20160211 15:57:49.237"></status>
+</kw>
+<kw name="Fill Content With Text">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>content</arg>
+<arg>${CONTENT}</arg>
+</arguments>
+<msg timestamp="20160211 15:57:52.016" level="INFO">Typing text '083-1719-6xx' into text field 'content'</msg>
+<status status="PASS" endtime="20160211 15:57:52.613" starttime="20160211 15:57:52.015"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:57:52.614" starttime="20160211 15:57:52.014"></status>
+</kw>
+<kw name="Click Publish">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>save-post</arg>
+</arguments>
+<msg timestamp="20160211 15:57:52.618" level="INFO">Clicking element 'save-post'.</msg>
+<status status="PASS" endtime="20160211 15:58:05.614" starttime="20160211 15:57:52.617"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Last edited by</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:58:05.821" starttime="20160211 15:58:05.615"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>publish</arg>
+</arguments>
+<msg timestamp="20160211 15:58:05.823" level="INFO">Clicking element 'publish'.</msg>
+<status status="PASS" endtime="20160211 15:58:07.136" starttime="20160211 15:58:05.822"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:58:07.137" starttime="20160211 15:57:52.615"></status>
+</kw>
+<kw name="Click View Post">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>link=View post</arg>
+</arguments>
+<msg timestamp="20160211 15:58:07.141" level="INFO">Clicking element 'link=View post'.</msg>
+<status status="PASS" endtime="20160211 15:58:21.769" starttime="20160211 15:58:07.140"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TITLE}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:58:29.434" starttime="20160211 15:58:21.770"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${CONTENT}</arg>
+</arguments>
+<msg timestamp="20160211 15:58:30.770" level="INFO">Current page contains text '083-1719-6xx'.</msg>
+<status status="PASS" endtime="20160211 15:58:30.771" starttime="20160211 15:58:29.435"></status>
+</kw>
+<status status="PASS" endtime="20160211 15:58:30.772" starttime="20160211 15:58:07.139"></status>
+</kw>
+<kw name="Remove Post">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>link=Edit</arg>
+</arguments>
+<msg timestamp="20160211 15:58:30.775" level="INFO">Clicking element 'link=Edit'.</msg>
+<status status="PASS" endtime="20160211 15:58:31.957" starttime="20160211 15:58:30.775"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//button[@class="editor-delete-post"]</arg>
+<arg>timeout=15</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:58:48.894" starttime="20160211 15:58:31.958"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//button[@class="editor-delete-post"]</arg>
+</arguments>
+<msg timestamp="20160211 15:58:48.896" level="INFO">Clicking element '//button[@class="editor-delete-post"]'.</msg>
+<status status="PASS" endtime="20160211 15:58:50.404" starttime="20160211 15:58:48.895"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[text()="Move to trash"]</arg>
+</arguments>
+<status status="PASS" endtime="20160211 15:58:50.596" starttime="20160211 15:58:50.405"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[text()="Move to trash"]</arg>
+</arguments>
+<msg timestamp="20160211 15:58:50.598" level="INFO">Clicking element '//*[text()="Move to trash"]'.
