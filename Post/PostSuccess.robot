@@ -5,7 +5,6 @@ Resource  ../Post/PostResource.robot
 Resource  ../Post/PostKeywords.robot
 Suite Setup     Open Browser And Login
 Suite Teardown  Close Browser
-Test Teardown  Remove Post
 Test Setup    Go To Dashboard Page
 *** Test Cases ***
 
@@ -59,16 +58,17 @@ Fill Content With Image
 Choose Uncategorized
   Click Element  //*[@id="categorychecklist"]//input[text()=Uncategorized]
 Click Publish
-  Wait Until Page Contains  Draft saved
+  Click Element   save-post
+  Wait Until Page Contains    Last edited by
   Click Element   publish
 Click View Post
   Click Element   link=View post
   Wait Until Page Contains   ${TITLE}   timeout=10
-  Page Should Contains  ${CONTENT}
+  Page Should Contain  ${CONTENT}
 Remove Post
   Click Element   link=Edit
   Wait Until Element Is Visible    //button[@class="editor-delete-post"]   timeout=15
   Click Element   //button[@class="editor-delete-post"]
   Wait Until Element Is Visible   //*[text()="Move to trash"]
   Click Element   //*[text()="Move to trash"]
-  Wait Until Page Should Contains   Deleted Post
+  Wait Until Page Contains   Deleted Post
