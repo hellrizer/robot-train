@@ -3,13 +3,13 @@ Resource  LoginKeywords.robot
 Resource  LoginResource.robot
 Suite Setup     Open Browser To Website
 *** Test Cases ***
-Login Success
+Login Success With No Remember Me
   Go To Login Page
-  Fill Valid Credentials
-  Disable Remember Me
-  Try Login
+  Fill Valid Username and Password
+  Uncheck Remember Me
+  Click Login
   Wait Until Page Contains  Dashboard
 *** Keywords ***
-Fill Valid Credentials
+Fill Valid Username and Password
   Input Text  user_login   ${VALID_USERNAME}
   Input Text  user_pass    ${VALID_PASSWORD}
