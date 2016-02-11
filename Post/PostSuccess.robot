@@ -58,8 +58,10 @@ Fill Content With Image
 Choose Uncategorized
   Click Element  //*[@id="categorychecklist"]//input[text()=Uncategorized]
 Click Publish
-  Click Element   save-post
-  Wait Until Page Contains    Last edited by   timeout=20
+  #Click Element   save-post
+  #Wait Until Page Contains    Last edited by   timeout=20
+  #Wait Until Page Does Not Contain Element   //*[@id="publish" or contains(@class,"disabled")]
+  Wait Until Element Does Not Contain     css=span.autosave-message   Saving Draft   timeout=10
   Click Element   publish
 Click View Post
   Click Element   link=View post
