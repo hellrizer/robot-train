@@ -6,22 +6,18 @@ Resource  ../Post/PostKeywords.robot
 Suite Setup     Open Browser And Login
 Suite Teardown  Close Browser
 Test Setup    Go To Dashboard Page
+
 *** Test Cases ***
-
-
 Post Content Success With Title and Text Content
-  Click Link Post
-  #Add New Post Entry
+  Click Link Add New Post
   Fill Title In Post
   Fill Content With Text
   #Choose Uncategorized
   Click Publish
   Click View Post
   Remove Post
-
 Post Content Success With Title and Text Image Content
-  Click Link Post
-  #Add New Post Entry
+  Click Link Add New Post
   Fill Title In Post
   Fill Content With Text
   Fill Content With Image
@@ -29,6 +25,7 @@ Post Content Success With Title and Text Image Content
   Click Publish
   Click View Post
   Remove Post
+
 *** Keywords ***
 Open Browser And Login
   Open Browser To Website
@@ -38,10 +35,9 @@ Open Browser And Login
   Uncheck Remember Me
   Click Login
   Wait Until Page Contains  Dashboard
-
-Click Link Post
+Click Link Add New Post
   Mouse Over   //*[@id="menu-posts"]/a/div[3]
-  Wait Until Element Is Visible   link=Add New  timeout=10
+  Wait Until Element Is Visible   link=Add New  timeout=30
   Click Element    //*[@id="menu-posts"]//a[text()="Add New"]
   Wait Until Page Contains   Add New Post
 Fill Title In Post
@@ -58,18 +54,15 @@ Fill Content With Image
 Choose Uncategorized
   Click Element  //*[@id="categorychecklist"]//input[text()=Uncategorized]
 Click Publish
-  #Click Element   save-post
-  #Wait Until Page Contains    Last edited by   timeout=20
-  #Wait Until Page Does Not Contain Element   //*[@id="publish" or contains(@class,"disabled")]
-  Wait Until Element Does Not Contain     css=span.autosave-message   Saving Draft   timeout=10
+  Wait Until Element Does Not Contain     css=span.autosave-message   Saving Draft   timeout=30
   Click Element   publish
 Click View Post
   Click Element   link=View post
-  Wait Until Page Contains   ${TITLE}   timeout=10
+  Wait Until Page Contains   ${TITLE}   timeout=30
   Page Should Contain  ${CONTENT}
 Remove Post
   Click Element   link=Edit
-  Wait Until Element Is Visible    //button[@class="editor-delete-post"]   timeout=15
+  Wait Until Element Is Visible    //button[@class="editor-delete-post"]   timeout=30
   Click Element   //button[@class="editor-delete-post"]
   Wait Until Element Is Visible   //*[text()="Move to trash"]
   Click Element   //*[text()="Move to trash"]
